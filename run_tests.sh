@@ -162,7 +162,7 @@ export -f pre_test_hook
 sudo iptables -I INPUT 1 -i eth2 -s 192.168.33.0/24 -j ACCEPT
 
 cd $WORKSPACE
-#git clone $DEVSTACK_GATE_REPO -b $DEVSTACK_GATE_BRANCH
+git clone $DEVSTACK_GATE_REPO -b $DEVSTACK_GATE_BRANCH
 
 # devstack-gate referneces $BASE/new for where it expects devstack-gate... Create copy there too
 # When we can disable SKIP_DEVSTACK_GATE_PROJECT (i.e. everything upstreamed) then this can be removed.
