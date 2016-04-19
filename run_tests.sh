@@ -4,7 +4,6 @@ echo $$ >> ~/run_tests.pid
 
 DEVSTACK_GATE_REPO="https://github.com/citrix-openstack/devstack-gate"
 DEVSTACK_GATE_BRANCH="master"
-
 export WORKSPACE=${WORKSPACE:-/home/jenkins/workspace/testing}
 
 # Trap the exit code + log a final message
@@ -163,7 +162,7 @@ export -f pre_test_hook
 sudo iptables -I INPUT 1 -i eth2 -s 192.168.33.0/24 -j ACCEPT
 
 cd $WORKSPACE
-git clone $DEVSTACK_GATE_REPO -b $DEVSTACK_GATE_BRANCH
+#git clone $DEVSTACK_GATE_REPO -b $DEVSTACK_GATE_BRANCH
 
 # devstack-gate referneces $BASE/new for where it expects devstack-gate... Create copy there too
 # When we can disable SKIP_DEVSTACK_GATE_PROJECT (i.e. everything upstreamed) then this can be removed.
