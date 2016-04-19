@@ -4,7 +4,6 @@ echo $$ >> ~/run_tests.pid
 
 DEVSTACK_GATE_REPO="https://github.com/citrix-openstack/devstack-gate"
 DEVSTACK_GATE_BRANCH="master"
-
 export WORKSPACE=${WORKSPACE:-/home/jenkins/workspace/testing}
 
 # Trap the exit code + log a final message
